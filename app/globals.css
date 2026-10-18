@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #0a2a1f;
+  --color-forest-2: #0e3b2b;
+  --color-moss: #1d5c40;
+  --color-cream: #f7f1e5;
+  --color-cream-2: #efe6d2;
+  --color-gold: #c9a24b;
+  --color-gold-2: #e4c67f;
+  --color-clay: #c96f4a;
+  --color-mist: #9fd1bc;
+  --color-ink: #101613;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Outfit", "Helvetica Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-forest);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-forest);
+}
+
+/* ---------- kinetic headline helpers ---------- */
+.split-line {
+  display: block;
+  overflow: hidden;
+}
+.split-line > span {
+  display: inline-block;
+  transform: translateY(110%);
+  will-change: transform;
+}
+
+/* ---------- marquee ---------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* ---------- strand divider (SVG draw) ---------- */
+.strand-path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+}
+
+/* ---------- 3D tilt cards ---------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s;
+  will-change: transform;
+}
+.tilt-card:hover {
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.55);
+}
+
+/* ---------- menu board rows ---------- */
+.menu-row .menu-photo {
+  opacity: 0;
+  transform: rotate(-4deg) scale(0.9) translateY(10px);
+  transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.menu-row:hover .menu-photo,
+.menu-row:focus-within .menu-photo {
+  opacity: 1;
+  transform: rotate(3deg) scale(1) translateY(0);
+}
+
+/* ---------- testimonial rotator ---------- */
+.quote-word {
+  display: inline-block;
+  transform: translateY(0.6em) rotateX(35deg);
+  opacity: 0;
+}
+
+/* ---------- misc ---------- */
+.gold-grad {
+  background: linear-gradient(120deg, #e4c67f 0%, #c9a24b 45%, #9a7a2e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation: none; }
+  .split-line > span { transform: none; }
+  .quote-word { transform: none; opacity: 1; }
+}
