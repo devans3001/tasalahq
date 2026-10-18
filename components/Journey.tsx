@@ -84,7 +84,7 @@ export function Journey({ reducedMotion }: { reducedMotion: boolean }) {
           The Growth Journey
         </p>
         <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mt-3 max-w-xl">
-          Watch a strand come back to life.
+          Watch dry hair come back to life.
         </h2>
 
         {isDesktop ? (
@@ -111,7 +111,7 @@ export function Journey({ reducedMotion }: { reducedMotion: boolean }) {
               ))}
             </div>
             <p className="mt-6 text-xs tracking-[0.25em] uppercase text-cream/50">
-              Keep scrolling — the strand transforms
+              Keep scrolling — the hair transforms
             </p>
           </div>
         ) : (

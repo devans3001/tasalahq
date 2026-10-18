@@ -197,16 +197,25 @@ export const menu: Service[] = [
   },
 ];
 
-/* The salon's own product line — from tasalahq.com's shop. */
+/* The salon's own product line — Truth by Tasala.
+   REAL products + prices, verified Oct 18, 2026 from the brand's own
+   SumUp store: https://truth-by-tasala.sumupstore.com/
+   Prices are in GBP as listed on the store. Check the live store for
+   current stock before launch — several lines sell out. */
+export const productBrand = "Truth by Tasala";
+export const productStore = "https://truth-by-tasala.sumupstore.com/";
+export const productAward =
+  "Nominated Beauty Brand of the Year (Hair) — BiL Beauty Awards 2024";
+
 export const products = [
-  { name: "Nourishing Shampoo", note: "Clean without stripping." },
-  { name: "Rinse-Out Conditioner", note: "Slip for easy detangling." },
-  { name: "Deep Moisture Infusion Mask", note: "The thirst-quencher." },
-  { name: "Ayurvedic Healing Hair Butter", note: "Seal in the moisture." },
-  { name: "Root Stimulating Oil", note: "Wake the scalp up." },
-  { name: "Reinforcer Protein Treatment", note: "Strength, rebuilt." },
-  { name: "6-in-1 Leave-In Conditioner", note: "One bottle, six jobs." },
-  { name: "Smooth Hold Edge Control", note: "Edges, laid." },
+  { name: "Full Hair Care Kit", size: "Complete set", price: "£85.00", note: "The whole routine in one box." },
+  { name: "Deep Moisture Infusion Mask", size: "500g", price: "£15.00", note: "The thirst-quencher." },
+  { name: "Root Stimulating Oil", size: "120ml", price: "£13.00", note: "Wake the scalp up." },
+  { name: "Curling Jelly", size: "500g", price: "£12.00", note: "Definition that holds." },
+  { name: "6-in-1 Leave-In Conditioner", size: "500ml", price: "£9.50", note: "One bottle, six jobs." },
+  { name: "Rinse-Out Conditioner", size: "500ml", price: "£9.50", note: "Slip for easy detangling." },
+  { name: "Nourishing Shampoo", size: "500ml", price: "£8.50", note: "Clean without stripping." },
+  { name: "Smooth Dark Edge Control", size: "150g", price: "£6.50", note: "Edges, laid." },
 ];
 
 /* The Growth Journey — the scroll-driven 3D story. */

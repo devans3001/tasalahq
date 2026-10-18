@@ -12,9 +12,9 @@ const LabCanvas = dynamic(() => import("./three").then((m) => m.LabCanvas), {
 });
 
 /* ------------------------------------------------------------------ */
-/*  The Strand Lab — interactive 3D viewer.                            */
-/*  Drag to rotate. Pick a treatment and the strand itself changes:    */
-/*  colour, gloss and glow all shift to match the service.              */
+/*  The Hair Lab — interactive 3D viewer.                              */
+/*  Drag to rotate the head. Pick a treatment and the hair itself      */
+/*  changes: colour, gloss and volume all shift to match the service.   */
 /* ------------------------------------------------------------------ */
 
 const MODES: LabMode[] = ["moisture", "colour", "strength"];
@@ -26,11 +26,11 @@ export function StrandLab({ reducedMotion }: { reducedMotion: boolean }) {
   return (
     <section className="py-24 sm:py-32 bg-forest">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <SectionHeading eyebrow="The Strand Lab" title="Touch the strand. See the treatment." />
+        <SectionHeading eyebrow="The Hair Lab" title="Touch the hair. See the treatment." />
         <Reveal className="mt-4 max-w-2xl">
           <p className="text-cream/75 text-lg">
-            Drag the coil to rotate it. Choose a treatment — the strand changes colour,
-            gloss and glow to show you what that service actually does to your hair.
+            Drag the head to rotate it. Choose a treatment — the hair itself changes colour,
+            gloss and volume to show you what that service actually does to your hair.
           </p>
         </Reveal>
 
@@ -75,8 +75,8 @@ export function StrandLab({ reducedMotion }: { reducedMotion: boolean }) {
             </div>
 
             <p className="mt-8 text-sm text-cream/50">
-              The coil is a live 3D model — it reacts to your touch, not a video.
-              If your device can't run WebGL, the strand still reads as a still image.
+              The head is a live 3D model — the hair reacts to your touch, not a video.
+              If your device can't run WebGL, the hair still reads as a still image.
             </p>
           </div>
         </div>

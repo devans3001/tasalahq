@@ -12,6 +12,8 @@ import {
   locations,
   marqueeWords,
   menu,
+  productAward,
+  productStore,
   products,
   signatureServices,
   whatsappUrl,
@@ -130,9 +132,12 @@ export function Hero({ reducedMotion }: { reducedMotion: boolean }) {
           </a>
         </Reveal>
 
-        <Reveal delay={1} className="mt-14 flex items-center gap-3 text-xs tracking-[0.25em] uppercase text-cream/50">
+        <Reveal delay={1} className="mt-14 flex flex-wrap items-center gap-3 text-xs tracking-[0.25em] uppercase text-cream/50">
           <span className="inline-block h-px w-10 bg-gold/60" />
-          Scroll — watch a strand come back to life
+          <span>Scroll — watch dry hair come back to life</span>
+          <span className="rounded-full border border-gold/40 px-3 py-1 normal-case tracking-normal text-gold-2">
+            ✦ Drag the hair — she turns
+          </span>
         </Reveal>
       </div>
     </section>
@@ -319,11 +324,11 @@ export function Products() {
   return (
     <section className="py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <SectionHeading eyebrow="The Tasala Shelf" title="Take the salon home." />
+        <SectionHeading eyebrow="Truth by Tasala" title="Her own line. Her own store." />
         <Reveal className="mt-4 max-w-2xl">
           <p className="text-cream/75 text-lg">
-            The salon's own product line — the same formulas your stylist uses in the chair,
-            for the days between visits.
+            The salon's own product brand — the same formulas your stylist uses in the chair,
+            for the days between visits. {productAward}.
           </p>
         </Reveal>
 
@@ -331,7 +336,7 @@ export function Products() {
           {products.map((p, i) => (
             <Reveal key={p.name} delay={(i % 4) * 0.08}>
               <a
-                href={business.website}
+                href={productStore}
                 target="_blank"
                 rel="noreferrer"
                 className="group block rounded-3xl border border-cream/10 bg-forest-2 p-6 transition-all hover:-translate-y-1 hover:border-gold/50"
@@ -341,13 +346,26 @@ export function Products() {
                 </span>
                 <h3 className="mt-4 font-display text-xl leading-snug">{p.name}</h3>
                 <p className="mt-1 text-sm text-cream/60">{p.note}</p>
+                <p className="mt-3 text-sm text-cream/50">{p.size}</p>
+                <p className="mt-1 font-display text-2xl text-gold-2">{p.price}</p>
                 <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold-2">
-                  Shop the line <span aria-hidden="true">→</span>
+                  Shop on the store <span aria-hidden="true">→</span>
                 </span>
               </a>
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-10">
+          <a
+            href={productStore}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded-full bg-gold px-7 py-3.5 font-semibold text-forest hover:bg-gold-2 transition-colors min-h-[48px]"
+          >
+            Shop all of Truth by Tasala →
+          </a>
+        </Reveal>
       </div>
     </section>
   );

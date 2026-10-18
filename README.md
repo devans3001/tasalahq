@@ -13,8 +13,9 @@ A complete, immersive 3D website concept for **TasalaHQ** — *Healthy Hair Expe
 
 ## Before this goes live for the client
 
-1. **Prices** — every service shows "Confirmed at booking". Replace with the real prices from the salon's Fresha price list in `lib/data.ts`.
-2. **Testimonials** — the five quotes are real (Fresha/Google, sources noted). Ask the salon for 2–3 more favourites to rotate in.
+1. **Prices (services)** — every service shows "Confirmed at booking". Replace with the real prices from the salon's Fresha price list in `lib/data.ts`.
+2. **Products are REAL** — the Truth by Tasala line (8 products, £ prices) was verified Oct 18, 2026 from the brand's own SumUp store (https://truth-by-tasala.sumupstore.com/). Check the live store for current stock before launch — several lines sell out.
+3. **Testimonials** — the five quotes are real (Fresha/Google, sources noted). Ask the salon for 2–3 more favourites to rotate in.
 3. **Photos** — gallery + service images are stock style references from Unsplash. Swap in the salon's own portfolio photos (same hotlink pattern).
 4. **Booking** — point the CTAs at the salon's real booking tool (Fresha, or keep WhatsApp) once they choose.
 5. **Credits** — the footer currently notes "Concept redesign by Claro & Co". Remove or keep per the client's wishes.
